@@ -235,9 +235,12 @@ def _clean(seg: str, first: bool) -> str:
     s = _PAREN_RE.sub("", seg)
     s = s.rsplit("　", 1)[-1]
     if "し、" in s:
-        return s.rsplit("し、", 1)[1]
-    if not first and s[:1] in ("、", "が", "を", "の", "と"):
+        s = s.rsplit("し、", 1)[1]
+    elif not first and s[:1] in ("、", "が", "を", "の", "と"):
         s = s[1:]
+    if s.startswith("大字"):
+        # 村の一部だけが動く文: 「上九一色村(c)大字梯及び古関が甲府市(c)に編入」の「大字…が」を名前から除く
+        s = s.split("が", 1)[1]
     return s
 
 
@@ -248,6 +251,8 @@ class Trans:
     from_name: str
     to_code: str
     to_name: str
+    partial: bool = False  # 元のコードの一部（大字）だけがこの行き先に動く
+    grain: str | None = None  # 指定があればそれを使う（なければ grain_of が決める）
 
 
 @dataclass
@@ -255,6 +260,7 @@ class Ctx:
     """行全体から引く補助情報。"""
 
     ward_codes: set[str] = field(default_factory=set)
+    ward_parent: dict[str, tuple[str, str]] = field(default_factory=dict)  # 区のコード -> (都道府県, 政令市名)
     city_code: dict[tuple[str, str], str] = field(default_factory=dict)  # (都道府県, 政令市名) -> コード
 
 
@@ -265,6 +271,7 @@ def make_ctx(records: list[list[str]]) -> Ctx:
         if parent.endswith("市"):
             if name:
                 ctx.ward_codes.add(code)  # 政令市の区
+                ctx.ward_parent[code] = (pref, parent)
             else:
                 ctx.city_code[(pref, parent)] = code  # 政令市そのもの
     return ctx
@@ -296,7 +303,27 @@ def parse_transitions(pattern: str, line: str, event_rows: list[list[str]], ctx:
     if kind == "absorb":
         if n < 2 or not tail.startswith("に編入"):
             raise ParseError("編入の文の形でない")
-        out = [pair(e, ents[-1]) for e in ents[:-1]]
+        # 「A、B が X に編入」、または「A が X に編入し、…が Y に編入」（同じ A が 2 つの行き先に分かれる）
+        bounds = [i for i in range(1, n) if raw[i].startswith("に編入し、")]
+        if bounds:
+            froms, tos = ents[: bounds[0] - 1], [ents[bounds[0] - 1]] + [ents[i] for i in bounds]
+        else:
+            froms, tos = ents[:-1], [ents[-1]]
+        # 名前の直後に「大字…が」が続くコードは、その一部だけが動く
+        part = {i for i in range(n - 1) if raw[i + 1].startswith("大字")}
+        pcodes = {ents[i][1] for i in part}
+        for f in froms:
+            for t in tos:
+                out.append(Trans(kind, f[1], f[0], t[1], t[0], partial=f[1] in pcodes))
+        # 区に編入された町は、区の行（grain=ward）に加えて、その政令市への行（grain=municipality）も作る
+        for f in froms:
+            for t in tos:
+                if t[1] in ctx.ward_codes and f[1] not in ctx.ward_codes:
+                    pc = ctx.ward_parent[t[1]]
+                    city = ctx.city_code.get(pc)
+                    if city is None:
+                        raise ParseError(f"区 {t[0]} の政令市 {pc[1]}（{pc[0]}）のコードが行から引けない")
+                    out.append(Trans(kind, f[1], f[0], city, pc[1], grain="municipality"))
     elif kind == "merge_new_code":
         # 大阪市の区どうしは「A と B が統合し、C を新設」と書かれる（合併ではなく統合）
         if n < 3 or not re.search(r"が(合併|統合)し", raw[-1]) or not tail.startswith("を新設"):
@@ -368,21 +395,42 @@ def parse_transitions(pattern: str, line: str, event_rows: list[list[str]], ctx:
 
 
 def grain_of(t: Trans, ctx: Ctx) -> str:
+    if t.grain:
+        return t.grain
     if t.kind.startswith("ward_") or t.from_code in ctx.ward_codes or t.to_code in ctx.ward_codes:
         return "ward"
     return "municipality"
 
 
 def municipality_split_violations(transitions: list[dict]) -> list[str]:
-    """検査 4: grain=municipality で、1 つの event の 1 つの from_code が 2 つ以上の to_code に行くもの。"""
-    dest: dict[tuple[str, str], set[str]] = defaultdict(set)
+    """検査 4: grain=municipality で、同じ施行日に 1 つの from_code が自分以外の 2 つ以上の to_code に行くのは、
+    その行が全部 partial=true のときだけ許す。partial=true の行は、同じ施行日・同じ from_code に
+    to_code が 2 種類以上ないといけない。"""
+    by: dict[tuple, list[dict]] = defaultdict(list)
     for t in transitions:
         if t["grain"] == "municipality":
-            dest[(t["event_id"], t["from_code"])].add(t["to_code"])
+            by[(t["effective_date"], t["from_code"])].append(t)
+    out = []
+    for (d, fc), ts in by.items():
+        others = {t["to_code"] for t in ts if t["to_code"] != fc}
+        if len(others) >= 2 and not all(t["partial"] for t in ts if t["to_code"] != fc):
+            out.append(f"[4] {d} の {fc} が市町村の単位で partial でなく {len(others)} 個の to_code に行く: {sorted(others)}")
+        if any(t["partial"] for t in ts) and len({t["to_code"] for t in ts if t["partial"]}) < 2:
+            out.append(f"[4] {d} の {fc} に partial の行があるが、行き先が 2 つ以上ない")
+    return out
+
+
+def ward_absorb_violations(transitions: list[dict], ward_codes: set[str]) -> list[str]:
+    """検査 7: 区でないコードから区へ行く行（区の新設・分離などの ward_* を除く）がある event には、
+    同じ from_code の grain=municipality の行がないといけない。"""
+    muni = {(t["event_id"], t["from_code"]) for t in transitions if t["grain"] == "municipality"}
     return [
-        f"[4] event {eid} の {fc} が市町村の単位で {len(tos)} 個の to_code に行く: {sorted(tos)}"
-        for (eid, fc), tos in dest.items()
-        if len(tos) >= 2
+        f"[7] event {t['event_id']} の {t['from_code']} → 区 {t['to_code']} に、市町村の単位の行がない"
+        for t in transitions
+        if not t["kind"].startswith("ward_")
+        and t["from_code"] not in ward_codes
+        and t["to_code"] in ward_codes
+        and (t["event_id"], t["from_code"]) not in muni
     ]
 
 
@@ -408,6 +456,7 @@ TRANSITIONS_SCHEMA = pa.schema(
         pa.field("pattern", _S),
         pa.field("kind", _S),
         pa.field("grain", _S),
+        pa.field("partial", pa.bool_()),
         pa.field("from_code", _S),
         pa.field("from_name", _S),
         pa.field("to_code", _S),
@@ -500,6 +549,7 @@ def build_silver(data: bytes, source_key: str, sha12: str, prev_rows: int | None
                     "pattern": pattern,
                     "kind": t.kind,
                     "grain": grain_of(t, ctx),
+                    "partial": t.partial,
                     "from_code": t.from_code,
                     "from_name": t.from_name,
                     "to_code": t.to_code,
@@ -508,6 +558,7 @@ def build_silver(data: bytes, source_key: str, sha12: str, prev_rows: int | None
             )
 
     problems += municipality_split_violations(transitions)
+    problems += ward_absorb_violations(transitions, ctx.ward_codes)
     bad_t = sorted({c for t in transitions for c in (t["from_code"], t["to_code"]) if not _CODE_OK.match(c)})
     if bad_t:
         problems.append(f"[5] transitions のコードが 5 桁の数字でない: {bad_t[:20]}")

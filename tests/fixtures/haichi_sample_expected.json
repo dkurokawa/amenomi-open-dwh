@@ -7,6 +7,7 @@
    [
     "designated_city",
     "municipality",
+    false,
     "01201",
     "札幌市",
     "01100",
@@ -22,6 +23,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "01201",
     "札幌市",
     "01101",
@@ -30,6 +32,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "01201",
     "札幌市",
     "01102",
@@ -38,6 +41,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "01201",
     "札幌市",
     "01103",
@@ -46,6 +50,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "01201",
     "札幌市",
     "01104",
@@ -54,6 +59,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "01201",
     "札幌市",
     "01105",
@@ -62,6 +68,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "01201",
     "札幌市",
     "01106",
@@ -70,6 +77,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "01201",
     "札幌市",
     "01107",
@@ -85,6 +93,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "01339",
     "戸井町",
     "01202",
@@ -93,6 +102,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "01340",
     "恵山町",
     "01202",
@@ -101,6 +111,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "01341",
     "椴法華村",
     "01202",
@@ -109,6 +120,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "01342",
     "南茅部町",
     "01202",
@@ -124,6 +136,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "01206",
     "釧路市",
     "01206",
@@ -132,6 +145,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "01666",
     "阿寒町",
     "01206",
@@ -140,6 +154,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "01669",
     "音別町",
     "01206",
@@ -155,6 +170,7 @@
    [
     "status_change",
     "municipality",
+    false,
     "01338",
     "亀田町",
     "01232",
@@ -170,6 +186,7 @@
    [
     "rename",
     "municipality",
+    false,
     "01301",
     "広島町",
     "01234",
@@ -185,6 +202,7 @@
    [
     "recode",
     "municipality",
+    false,
     "01439",
     "空知支庁幌加内町",
     "01472",
@@ -200,6 +218,7 @@
    [
     "rename",
     "municipality",
+    false,
     "01609",
     "幌泉町",
     "01609",
@@ -215,6 +234,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "03522",
     "福岡町",
     "03213",
@@ -223,6 +243,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "03525",
     "金田一村",
     "03213",
@@ -238,6 +259,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "03213",
     "二戸市",
     "03213",
@@ -246,6 +268,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "03521",
     "浄法寺町",
     "03213",
@@ -261,6 +284,7 @@
    [
     "recode",
     "municipality",
+    false,
     "07485",
     "東白川郡古殿町",
     "07505",
@@ -276,6 +300,7 @@
    [
     "status_change",
     "municipality",
+    false,
     "08405",
     "鹿島町",
     "08222",
@@ -291,6 +316,7 @@
    [
     "designated_city",
     "municipality",
+    false,
     "11244",
     "さいたま市",
     "11100",
@@ -306,6 +332,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "11213",
     "岩槻市",
     "11100",
@@ -321,6 +348,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11101",
@@ -329,6 +357,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11102",
@@ -337,6 +366,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11103",
@@ -345,6 +375,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11104",
@@ -353,6 +384,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11105",
@@ -361,6 +393,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11106",
@@ -369,6 +402,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11107",
@@ -377,6 +411,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11108",
@@ -385,6 +420,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11244",
     "さいたま市",
     "11109",
@@ -400,6 +436,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "11100",
     "さいたま市",
     "11110",
@@ -415,6 +452,7 @@
    [
     "status_change",
     "municipality",
+    false,
     "13305",
     "日の出村",
     "13305",
@@ -430,6 +468,7 @@
    [
     "ward_separate",
     "ward",
+    false,
     "14109",
     "港北区",
     "14117",
@@ -438,6 +477,7 @@
    [
     "ward_separate",
     "ward",
+    false,
     "14109",
     "港北区",
     "14118",
@@ -446,6 +486,7 @@
    [
     "ward_separate",
     "ward",
+    false,
     "14113",
     "緑区",
     "14117",
@@ -454,6 +495,7 @@
    [
     "ward_separate",
     "ward",
+    false,
     "14113",
     "緑区",
     "14118",
@@ -469,6 +511,7 @@
    [
     "ward_separate",
     "ward",
+    false,
     "14110",
     "戸塚区",
     "14115",
@@ -477,6 +520,7 @@
    [
     "ward_separate",
     "ward",
+    false,
     "14110",
     "戸塚区",
     "14116",
@@ -492,6 +536,7 @@
    [
     "ward_separate",
     "ward",
+    false,
     "14135",
     "多摩区",
     "14137",
@@ -507,6 +552,7 @@
    [
     "recode",
     "municipality",
+    false,
     "17421",
     "鳳至郡穴水町",
     "17461",
@@ -515,10 +561,61 @@
    [
     "recode",
     "municipality",
+    false,
     "17422",
     "門前町",
     "17462",
     "門前町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-03-01",
+  "pattern": "編入合併",
+  "reason_first_line": "中道町(19326)と上九一色村(19341)大字梯及び古関が甲府市(19201)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "19326",
+    "中道町",
+    "19201",
+    "甲府市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    true,
+    "19341",
+    "上九一色村",
+    "19201",
+    "甲府市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-03-01",
+  "pattern": "編入合併",
+  "reason_first_line": "上九一色村(19341)大字梯及び古関が甲府市(19201)に編入し、大字精進、本栖及び富士ヶ嶺が富士河口湖町(19430)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    true,
+    "19341",
+    "上九一色村",
+    "19201",
+    "甲府市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    true,
+    "19341",
+    "上九一色村",
+    "19430",
+    "富士河口湖町"
    ]
   ]
  },
@@ -530,6 +627,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "20421",
     "木曽福島町",
     "20432",
@@ -538,6 +636,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "20426",
     "日義村",
     "20432",
@@ -546,6 +645,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "20427",
     "開田村",
     "20432",
@@ -554,10 +654,27 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "20428",
     "三岳村",
     "20432",
     "木曽町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-04-01",
+  "pattern": "政令指定都市施行",
+  "reason_first_line": "静岡市(22201)の静岡市(22100)への政令指定都市施行",
+  "transitions": [
+   [
+    "designated_city",
+    "municipality",
+    false,
+    "22201",
+    "静岡市",
+    "22100",
+    "静岡市"
    ]
   ]
  },
@@ -569,10 +686,45 @@
    [
     "absorb",
     "ward",
+    false,
     "22382",
     "蒲原町",
     "22103",
     "清水区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "22382",
+    "蒲原町",
+    "22100",
+    "静岡市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2008-11-01",
+  "pattern": "編入合併",
+  "reason_first_line": "由比町(22383)が清水区(22103)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "ward",
+    false,
+    "22383",
+    "由比町",
+    "22103",
+    "清水区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "22383",
+    "由比町",
+    "22100",
+    "静岡市"
    ]
   ]
  },
@@ -584,6 +736,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22131",
     "中区",
     "22138",
@@ -592,6 +745,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22132",
     "東区",
     "22138",
@@ -600,6 +754,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22133",
     "西区",
     "22138",
@@ -608,6 +763,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22134",
     "南区",
     "22138",
@@ -616,6 +772,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22135",
     "北区",
     "22138",
@@ -624,6 +781,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22135",
     "北区",
     "22139",
@@ -632,6 +790,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22136",
     "浜北区",
     "22139",
@@ -640,6 +799,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22137",
     "天竜区",
     "22140",
@@ -655,6 +815,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22131",
     "中区",
     "22138",
@@ -663,6 +824,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22132",
     "東区",
     "22138",
@@ -671,6 +833,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22133",
     "西区",
     "22138",
@@ -679,6 +842,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22134",
     "南区",
     "22138",
@@ -687,6 +851,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22135",
     "北区",
     "22138",
@@ -702,6 +867,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22135",
     "北区",
     "22139",
@@ -710,6 +876,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22136",
     "浜北区",
     "22139",
@@ -725,6 +892,7 @@
    [
     "ward_reorg",
     "ward",
+    false,
     "22137",
     "天竜区",
     "22140",
@@ -740,6 +908,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "22201",
     "静岡市",
     "22201",
@@ -748,6 +917,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "22204",
     "清水市",
     "22201",
@@ -763,6 +933,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25301",
     "志賀町",
     "25201",
@@ -778,6 +949,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "25203",
     "長浜市",
     "25203",
@@ -786,6 +958,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "25481",
     "浅井町",
     "25203",
@@ -794,6 +967,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "25484",
     "びわ町",
     "25203",
@@ -809,6 +983,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25482",
     "虎姫町",
     "25203",
@@ -817,6 +992,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25483",
     "湖北町",
     "25203",
@@ -825,6 +1001,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25501",
     "高月町",
     "25203",
@@ -833,6 +1010,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25502",
     "木之本町",
     "25203",
@@ -841,6 +1019,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25503",
     "余呉町",
     "25203",
@@ -849,6 +1028,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25504",
     "西浅井町",
     "25203",
@@ -864,6 +1044,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "25204",
     "近江八幡市",
     "25204",
@@ -872,6 +1053,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "25381",
     "安土町",
     "25204",
@@ -887,6 +1069,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25205",
     "八日市市",
     "25213",
@@ -895,6 +1078,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25401",
     "永源寺町",
     "25213",
@@ -903,6 +1087,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25402",
     "五個荘町",
     "25213",
@@ -911,6 +1096,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25421",
     "愛東町",
     "25213",
@@ -919,6 +1105,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25422",
     "湖東町",
     "25213",
@@ -934,6 +1121,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25363",
     "水口町",
     "25209",
@@ -942,6 +1130,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25364",
     "土山町",
     "25209",
@@ -950,6 +1139,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25365",
     "甲賀町",
     "25209",
@@ -958,6 +1148,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25366",
     "甲南町",
     "25209",
@@ -966,6 +1157,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25367",
     "信楽町",
     "25209",
@@ -981,6 +1173,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25342",
     "中主町",
     "25210",
@@ -989,6 +1182,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25343",
     "野洲町",
     "25210",
@@ -1004,6 +1198,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25361",
     "石部町",
     "25211",
@@ -1012,6 +1207,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25362",
     "甲西町",
     "25211",
@@ -1027,6 +1223,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25521",
     "マキノ町",
     "25212",
@@ -1035,6 +1232,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25522",
     "今津町",
     "25212",
@@ -1043,6 +1241,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25523",
     "朽木村",
     "25212",
@@ -1051,6 +1250,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25524",
     "安曇川町",
     "25212",
@@ -1059,6 +1259,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25525",
     "高島町",
     "25212",
@@ -1067,6 +1268,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25526",
     "新旭町",
     "25212",
@@ -1082,6 +1284,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25382",
     "蒲生町",
     "25213",
@@ -1090,6 +1293,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25403",
     "能登川町",
     "25213",
@@ -1105,6 +1309,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25461",
     "山東町",
     "25214",
@@ -1113,6 +1318,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25462",
     "伊吹町",
     "25214",
@@ -1121,6 +1327,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25463",
     "米原町",
     "25214",
@@ -1136,6 +1343,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "25464",
     "近江町",
     "25214",
@@ -1151,6 +1359,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25423",
     "秦荘町",
     "25425",
@@ -1159,6 +1368,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "25424",
     "愛知川町",
     "25425",
@@ -1174,10 +1384,20 @@
    [
     "absorb",
     "ward",
+    false,
     "26381",
     "京北町",
     "26108",
     "右京区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "26381",
+    "京北町",
+    "26100",
+    "京都市"
    ]
   ]
  },
@@ -1189,6 +1409,7 @@
    [
     "merge_new_code",
     "ward",
+    false,
     "27101",
     "北区",
     "27127",
@@ -1197,6 +1418,7 @@
    [
     "merge_new_code",
     "ward",
+    false,
     "27112",
     "大淀区",
     "27127",
@@ -1212,6 +1434,7 @@
    [
     "merge_new_code",
     "ward",
+    false,
     "27105",
     "東区",
     "27128",
@@ -1220,6 +1443,7 @@
    [
     "merge_new_code",
     "ward",
+    false,
     "27110",
     "南区",
     "27128",
@@ -1235,6 +1459,7 @@
    [
     "designated_city",
     "municipality",
+    false,
     "27201",
     "堺市",
     "27140",
@@ -1250,6 +1475,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "27201",
     "堺市",
     "27141",
@@ -1258,6 +1484,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "27201",
     "堺市",
     "27142",
@@ -1266,6 +1493,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "27201",
     "堺市",
     "27143",
@@ -1274,6 +1502,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "27201",
     "堺市",
     "27144",
@@ -1282,6 +1511,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "27201",
     "堺市",
     "27145",
@@ -1290,6 +1520,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "27201",
     "堺市",
     "27146",
@@ -1298,6 +1529,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "27201",
     "堺市",
     "27147",
@@ -1313,6 +1545,7 @@
    [
     "merge_new_code",
     "ward",
+    false,
     "28103",
     "葺合区",
     "28110",
@@ -1321,6 +1554,7 @@
    [
     "merge_new_code",
     "ward",
+    false,
     "28104",
     "生田区",
     "28110",
@@ -1336,6 +1570,7 @@
    [
     "rename",
     "municipality",
+    false,
     "31404",
     "溝口町",
     "31404",
@@ -1351,6 +1586,7 @@
    [
     "designated_city",
     "municipality",
+    false,
     "34201",
     "広島市",
     "34100",
@@ -1366,6 +1602,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "34201",
     "広島市",
     "34101",
@@ -1374,6 +1611,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "34201",
     "広島市",
     "34102",
@@ -1382,6 +1620,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "34201",
     "広島市",
     "34103",
@@ -1390,6 +1629,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "34201",
     "広島市",
     "34104",
@@ -1398,6 +1638,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "34201",
     "広島市",
     "34105",
@@ -1406,6 +1647,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "34201",
     "広島市",
     "34106",
@@ -1414,6 +1656,7 @@
    [
     "ward_create",
     "ward",
+    false,
     "34201",
     "広島市",
     "34107",
@@ -1429,10 +1672,36 @@
    [
     "ward_create",
     "ward",
+    false,
     "34100",
     "広島市",
     "34108",
     "佐伯区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-04-25",
+  "pattern": "編入合併",
+  "reason_first_line": "湯来町(34324)が佐伯区(34108)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "ward",
+    false,
+    "34324",
+    "湯来町",
+    "34108",
+    "佐伯区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "34324",
+    "湯来町",
+    "34100",
+    "広島市"
    ]
   ]
  },
@@ -1444,6 +1713,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "34482",
     "沼隈町",
     "34207",
@@ -1459,6 +1729,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "37421",
     "高瀬町",
     "37208",
@@ -1467,6 +1738,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "37422",
     "山本町",
     "37208",
@@ -1475,6 +1747,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "37423",
     "三野町",
     "37208",
@@ -1483,6 +1756,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "37425",
     "豊中町",
     "37208",
@@ -1491,6 +1765,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "37426",
     "詫間町",
     "37208",
@@ -1499,6 +1774,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "37427",
     "仁尾町",
     "37208",
@@ -1507,6 +1783,7 @@
    [
     "merge_new_code",
     "municipality",
+    false,
     "37429",
     "財田町",
     "37208",
@@ -1522,6 +1799,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "38207",
     "大洲市",
     "38207",
@@ -1530,6 +1808,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "38421",
     "長浜町",
     "38207",
@@ -1538,6 +1817,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "38424",
     "肱川町",
     "38207",
@@ -1546,6 +1826,7 @@
    [
     "merge_reuse_code",
     "municipality",
+    false,
     "38425",
     "河辺村",
     "38207",
@@ -1561,6 +1842,7 @@
    [
     "absorb",
     "municipality",
+    false,
     "39383",
     "春野町",
     "39201",
@@ -1576,6 +1858,7 @@
    [
     "ward_split",
     "ward",
+    false,
     "40102",
     "小倉区",
     "40106",
@@ -1584,10 +1867,27 @@
    [
     "ward_split",
     "ward",
+    false,
     "40102",
     "小倉区",
     "40107",
     "小倉南区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1972-04-01",
+  "pattern": "政令指定都市施行",
+  "reason_first_line": "福岡市(40201)の福岡市(40130)への政令指定都市施行",
+  "transitions": [
+   [
+    "designated_city",
+    "municipality",
+    false,
+    "40201",
+    "福岡市",
+    "40130",
+    "福岡市"
    ]
   ]
  },
@@ -1599,10 +1899,20 @@
    [
     "absorb",
     "ward",
+    false,
     "40321",
     "早良町",
     "40135",
     "西区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "40321",
+    "早良町",
+    "40130",
+    "福岡市"
    ]
   ]
  }

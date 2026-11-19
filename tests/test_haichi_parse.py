@@ -34,7 +34,7 @@ def test_expected_transitions_per_event(sample_bytes):
     for t in tables["haichi_transitions"].to_pylist():
         e = events[t["event_id"]]
         key = (str(e["effective_date"]), e["pattern"], e["reason_text"].split("\n")[0])
-        got.setdefault(key, []).append([t["kind"], t["grain"], t["from_code"], t["from_name"], t["to_code"], t["to_name"]])
+        got.setdefault(key, []).append([t["kind"], t["grain"], t["partial"], t["from_code"], t["from_name"], t["to_code"], t["to_name"]])
     assert len(expected) == len(got)
     for exp in expected:
         key = (exp["effective_date"], exp["pattern"], exp["reason_first_line"])
@@ -113,25 +113,81 @@ def test_designated_city_municipality_and_ward_create(sample_bytes):
 # ---------------------------------------------------------------- 検査
 
 
+def _t(eid, fc, tc, grain="municipality", partial=False, date="2006-03-01"):
+    return {"event_id": eid, "effective_date": date, "from_code": fc, "to_code": tc, "grain": grain, "partial": partial}
+
+
 def test_check4_flags_ward_split_placed_in_municipality_grain():
-    """区の分割を市町村の grain に誤って入れると落ちる。"""
+    """区の分割を市町村の grain に誤って入れると落ちる（partial でない 1 → 多）。"""
     ctx = h.Ctx(ward_codes={"40102", "40106", "40107"})
     ts = h.parse_transitions("分割", "小倉区(40102)を分割し、小倉北区(40106)、小倉南区(40107)を新設", [], ctx)
-    rows = [
-        {"event_id": "e1", "from_code": t.from_code, "to_code": t.to_code, "grain": "municipality"} for t in ts
-    ]
+    rows = [_t("e1", t.from_code, t.to_code) for t in ts]
     msgs = h.municipality_split_violations(rows)
     assert len(msgs) == 1 and "40102" in msgs[0] and msgs[0].startswith("[4]")
-    # ward の grain なら通る
     assert h.municipality_split_violations([{**r, "grain": "ward"} for r in rows]) == []
 
 
-def test_check4_passes_when_split_is_across_different_events():
-    rows = [
-        {"event_id": "e1", "from_code": "1", "to_code": "2", "grain": "municipality"},
-        {"event_id": "e2", "from_code": "1", "to_code": "3", "grain": "municipality"},
-    ]
+def test_check4_non_partial_one_to_many_fails_even_across_events():
+    rows = [_t("e1", "1", "2"), _t("e2", "1", "3")]  # 同じ施行日・同じ from_code → 別の event でも 1 → 多
+    assert len(h.municipality_split_violations(rows)) == 1
+
+
+def test_check4_allows_partial_split_but_needs_two_siblings():
+    ok = [_t("e1", "1", "2", partial=True), _t("e2", "1", "2", partial=True), _t("e2", "1", "3", partial=True)]
+    assert h.municipality_split_violations(ok) == []
+    lone = [_t("e1", "1", "2", partial=True)]
+    assert len(h.municipality_split_violations(lone)) == 1
+    mixed = [_t("e1", "1", "2", partial=True), _t("e1", "1", "3")]
+    assert h.municipality_split_violations(mixed)  # partial でない行が混ざる
+
+
+def test_check4_ignores_self_rows():
+    rows = [_t("e1", "1", "1"), _t("e1", "1", "2")]  # merge_reuse_code の自分自身への行
     assert h.municipality_split_violations(rows) == []
+
+
+def test_kamikuishiki_two_events_exact(sample_bytes):
+    tables = _build(sample_bytes)
+    ev = {e["event_id"]: e for e in tables["haichi_events"].to_pylist()}
+    by_first: dict[str, list] = {}
+    for t in tables["haichi_transitions"].to_pylist():
+        by_first.setdefault(ev[t["event_id"]]["reason_text"], []).append(
+            (t["kind"], t["grain"], t["partial"], t["from_code"], t["from_name"], t["to_code"], t["to_name"])
+        )
+    a = by_first["中道町(19326)と上九一色村(19341)大字梯及び古関が甲府市(19201)に編入"]
+    b = by_first["上九一色村(19341)大字梯及び古関が甲府市(19201)に編入し、大字精進、本栖及び富士ヶ嶺が富士河口湖町(19430)に編入"]
+    assert a == [
+        ("absorb", "municipality", False, "19326", "中道町", "19201", "甲府市"),
+        ("absorb", "municipality", True, "19341", "上九一色村", "19201", "甲府市"),
+    ]
+    assert b == [
+        ("absorb", "municipality", True, "19341", "上九一色村", "19201", "甲府市"),
+        ("absorb", "municipality", True, "19341", "上九一色村", "19430", "富士河口湖町"),
+    ]
+    # 甲府市 → 富士河口湖町 の行は作らない。名前に大字が残らない
+    trs = tables["haichi_transitions"].to_pylist()
+    assert not any(t["from_code"] == "19201" and t["to_code"] == "19430" for t in trs)
+    assert not any(c in t[k] for t in trs for k in ("from_name", "to_name") for c in ("大字", "を", "、"))
+
+
+def test_towns_absorbed_into_wards_get_a_municipality_row(sample_bytes):
+    trs = _build(sample_bytes)["haichi_transitions"].to_pylist()
+    got = {(t["from_code"], t["to_code"], t["grain"]) for t in trs if t["kind"] == "absorb"}
+    for town, ward, city in [
+        ("40321", "40135", "40130"), ("26381", "26108", "26100"), ("34324", "34108", "34100"),
+        ("22382", "22103", "22100"), ("22383", "22103", "22100"),
+    ]:  # fmt: skip
+        assert (town, ward, "ward") in got and (town, city, "municipality") in got
+
+
+def test_check7_flags_missing_municipality_row():
+    wards = {"40135"}
+    ward_only = [{**_t("e1", "40321", "40135", grain="ward"), "kind": "absorb"}]
+    assert len(h.ward_absorb_violations(ward_only, wards)) == 1
+    both = ward_only + [{**_t("e1", "40321", "40130"), "kind": "absorb"}]
+    assert h.ward_absorb_violations(both, wards) == []
+    # 区の新設（ward_*）は対象外
+    assert h.ward_absorb_violations([{**_t("e2", "01201", "01101", grain="ward"), "kind": "ward_create"}], {"01101"}) == []
 
 
 def _sample_recs(sample_bytes):
