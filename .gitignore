@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+dist/
+*.egg-info/
+.env
+.env.*
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+.playwright-mcp/
+.DS_Store
