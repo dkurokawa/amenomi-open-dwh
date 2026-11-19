@@ -169,6 +169,8 @@ def validate_download(content_type: str, data: bytes) -> tuple[int, str]:
     header, recs = read_csv(data)
     if header != COLUMNS:
         raise ValueError(f"ヘッダが 11 列の想定と一致しない: {header!r}")
+    if not recs:
+        raise ValueError("データ行が 0 行（ヘッダだけの CSV は原本として置かない）")
     return len(recs), hashlib.sha256(data).hexdigest()
 
 
@@ -500,6 +502,8 @@ def build_silver(data: bytes, source_key: str, sha12: str, prev_rows: int | None
     bad_code = sorted({r[1] for r in recs if not _CODE_OK.match(r[1])})
     if bad_code:
         problems.append(f"[5] 標準地域コードが 5 桁の数字でない: {bad_code[:20]}")
+    if not recs:
+        problems.append("[6] データ行が 0 行")
     if prev_rows is not None and len(recs) < prev_rows:
         problems.append(f"[6] 行数 {len(recs)} が前回 build の {prev_rows} を下回る")
 

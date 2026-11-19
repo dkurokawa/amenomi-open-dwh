@@ -118,3 +118,11 @@ def test_usage():
 
 def test_code_version_is_a_string():
     assert isinstance(ledger.code_version(), str)
+
+
+def test_fetch_refuses_header_only_csv(fake_get, sample_bytes):
+    fake_get["body"] = sample_bytes.split(b"\n", 1)[0] + b"\n"
+    with pytest.raises(ValueError, match="0 行"):
+        h.fetch()
+    assert not h.manifest_path().exists()
+    assert _ledger()[-1]["status"] == "fail"

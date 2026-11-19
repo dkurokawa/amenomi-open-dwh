@@ -20,9 +20,11 @@ uv run pytest                        # テスト（ネットワークには触�
 appId は要らない。キャッシュの置き場は環境変数 `AOD_CACHE`（既定 `~/.cache/amenomi-open-dwh`）。
 
 - `fetch`: 直前の原本と sha256 が同じなら何も置かず、台帳に `skipped_nochange` を書く。原本は上書きしない。HTML のエラーページやヘッダが違う CSV は置かずに止まる
-- `build`: 検査に落ちたら終了コード 1 で silver を書かない。落ちた項目は全部出す。検査は 1 ヘッダ、2 事由パターン、3 transitions を作れない event、4 市町村の単位の分割（同じ施行日に 1 つの from_code が自分以外の 2 つ以上の to_code に行くのは、全部 `partial=true` のときだけ。`partial=true` の行は行き先が 2 つ以上必要）、5 コードが 5 桁、6 行数が前回を下回らない、7 区に編入された町（ward_* 以外で、区でないコードから区へ行く行）に市町村の単位の行がある
+- `build`: 検査に落ちたら終了コード 1 で silver を書かない。落ちた項目は全部出す。検査は 1 ヘッダ、2 事由パターン、3 transitions を作れない event、4 市町村の単位の分割（同じ施行日に 1 つの from_code が自分以外の 2 つ以上の to_code に行くのは、全部 `partial=true` のときだけ。`partial=true` の行は行き先が 2 つ以上必要）、5 コードが 5 桁、6 データ行が 1 行以上あり、前回を下回らない、7 区に編入された町（ward_* 以外で、区でないコードから区へ行く行）に市町村の単位の行がある
 - bronze: `$AOD_CACHE/bronze/estat/haichi/fetched=<日付>/haichi_<sha256 先頭 12>.csv`（`_manifest.jsonl` に 1 行ずつ記録）
 - 実行台帳: `$AOD_CACHE/_ledger/runs.jsonl`（1 行 = 1 実行。失敗した実行も書く）
+
+- 制約: silver の 3 本は 1 本ずつ差し替える。差し替えの途中でプロセスが止まると、3 本の世代がそろわないことがある（そのときは `build` をもう一度回す）
 
 ### silver（`$AOD_CACHE/silver/haichi/`）
 
