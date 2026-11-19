@@ -1,0 +1,24 @@
+[project]
+name = "amenomi-open-dwh"
+version = "0.1.0"
+description = "日本全国の公開データを、共通の軸でつないで引けるようにする DWH の取り込み（EL）"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyarrow>=17",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aod"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
