@@ -1,0 +1,1919 @@
+[
+ {
+  "effective_date": "1972-04-01",
+  "pattern": "政令指定都市施行",
+  "reason_first_line": "札幌市(01201)の札幌市(01100)への政令指定都市施行",
+  "transitions": [
+   [
+    "designated_city",
+    "municipality",
+    false,
+    "01201",
+    "札幌市",
+    "01100",
+    "札幌市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1972-04-01",
+  "pattern": "区の新設",
+  "reason_first_line": "札幌市(01201)の札幌市(01100)への政令指定都市施行",
+  "transitions": [
+   [
+    "ward_create",
+    "ward",
+    false,
+    "01201",
+    "札幌市",
+    "01101",
+    "中央区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "01201",
+    "札幌市",
+    "01102",
+    "北区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "01201",
+    "札幌市",
+    "01103",
+    "東区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "01201",
+    "札幌市",
+    "01104",
+    "白石区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "01201",
+    "札幌市",
+    "01105",
+    "豊平区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "01201",
+    "札幌市",
+    "01106",
+    "南区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "01201",
+    "札幌市",
+    "01107",
+    "西区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2004-12-01",
+  "pattern": "編入合併",
+  "reason_first_line": "戸井町(01339)、恵山町(01340)、椴法華村(01341)、南茅部町(01342)が函館市(01202)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "01339",
+    "戸井町",
+    "01202",
+    "函館市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "01340",
+    "恵山町",
+    "01202",
+    "函館市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "01341",
+    "椴法華村",
+    "01202",
+    "函館市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "01342",
+    "南茅部町",
+    "01202",
+    "函館市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-10-11",
+  "pattern": "新設合併（コード追加なし）",
+  "reason_first_line": "釧路市(01206)、阿寒町(01666)、音別町(01669)が合併し、釧路市を新設",
+  "transitions": [
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "01206",
+    "釧路市",
+    "01206",
+    "釧路市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "01666",
+    "阿寒町",
+    "01206",
+    "釧路市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "01669",
+    "音別町",
+    "01206",
+    "釧路市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1971-11-01",
+  "pattern": "市制施行",
+  "reason_first_line": "亀田町(01338)が亀田市(01232)に市制施行",
+  "transitions": [
+   [
+    "status_change",
+    "municipality",
+    false,
+    "01338",
+    "亀田町",
+    "01232",
+    "亀田市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1996-09-01",
+  "pattern": "名称変更",
+  "reason_first_line": "広島町(01301)が広島市に市制施行し、北広島市(01234)に名称変更",
+  "transitions": [
+   [
+    "rename",
+    "municipality",
+    false,
+    "01301",
+    "広島町",
+    "01234",
+    "北広島市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2010-04-01",
+  "pattern": "郡の区域変更",
+  "reason_first_line": "空知支庁幌加内町(01439)が上川支庁幌加内町(01472)に区域変更",
+  "transitions": [
+   [
+    "recode",
+    "municipality",
+    false,
+    "01439",
+    "空知支庁幌加内町",
+    "01472",
+    "上川支庁幌加内町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1970-10-01",
+  "pattern": "名称変更",
+  "reason_first_line": "幌泉町(01609)がえりも町(01609)に名称変更",
+  "transitions": [
+   [
+    "rename",
+    "municipality",
+    false,
+    "01609",
+    "幌泉町",
+    "01609",
+    "えりも町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1972-04-01",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "福岡町(03522)、金田一村(03525)が合併し、二戸市(03213)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "03522",
+    "福岡町",
+    "03213",
+    "二戸市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "03525",
+    "金田一村",
+    "03213",
+    "二戸市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-01-01",
+  "pattern": "新設合併（コード追加なし）",
+  "reason_first_line": "二戸市(03213)、浄法寺町(03521)が合併し、二戸市を新設",
+  "transitions": [
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "03213",
+    "二戸市",
+    "03213",
+    "二戸市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "03521",
+    "浄法寺町",
+    "03213",
+    "二戸市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1994-04-01",
+  "pattern": "郡の区域変更",
+  "reason_first_line": "東白川郡古殿町(07485)が石川郡古殿町(07505)に郡の区域変更",
+  "transitions": [
+   [
+    "recode",
+    "municipality",
+    false,
+    "07485",
+    "東白川郡古殿町",
+    "07505",
+    "石川郡古殿町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1995-09-01",
+  "pattern": "市制施行",
+  "reason_first_line": "鹿島町(08405)が鹿嶋町に名称変更し、鹿嶋市(08222)に市制施行",
+  "transitions": [
+   [
+    "status_change",
+    "municipality",
+    false,
+    "08405",
+    "鹿島町",
+    "08222",
+    "鹿嶋市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2003-04-01",
+  "pattern": "政令指定都市施行",
+  "reason_first_line": "さいたま市(11244)のさいたま市(11100)への政令指定都市施行",
+  "transitions": [
+   [
+    "designated_city",
+    "municipality",
+    false,
+    "11244",
+    "さいたま市",
+    "11100",
+    "さいたま市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-04-01",
+  "pattern": "編入合併",
+  "reason_first_line": "岩槻市(11213)がさいたま市(11100)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "11213",
+    "岩槻市",
+    "11100",
+    "さいたま市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2003-04-01",
+  "pattern": "区の新設",
+  "reason_first_line": "さいたま市(11244)のさいたま市(11100)への政令指定都市施行",
+  "transitions": [
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11101",
+    "西区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11102",
+    "北区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11103",
+    "大宮区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11104",
+    "見沼区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11105",
+    "中央区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11106",
+    "桜区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11107",
+    "浦和区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11108",
+    "南区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11244",
+    "さいたま市",
+    "11109",
+    "緑区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-04-01",
+  "pattern": "区の新設",
+  "reason_first_line": "岩槻区(11110)の新設",
+  "transitions": [
+   [
+    "ward_create",
+    "ward",
+    false,
+    "11100",
+    "さいたま市",
+    "11110",
+    "岩槻区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1974-06-01",
+  "pattern": "町制施行",
+  "reason_first_line": "日の出村(13305)が日の出町(13305)に町制施行",
+  "transitions": [
+   [
+    "status_change",
+    "municipality",
+    false,
+    "13305",
+    "日の出村",
+    "13305",
+    "日の出町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1994-11-06",
+  "pattern": "分離",
+  "reason_first_line": "港北区(14109)、緑区(14113)から分離し、青葉区(14117)、都筑区(14118)を新設",
+  "transitions": [
+   [
+    "ward_separate",
+    "ward",
+    false,
+    "14109",
+    "港北区",
+    "14117",
+    "青葉区"
+   ],
+   [
+    "ward_separate",
+    "ward",
+    false,
+    "14109",
+    "港北区",
+    "14118",
+    "都筑区"
+   ],
+   [
+    "ward_separate",
+    "ward",
+    false,
+    "14113",
+    "緑区",
+    "14117",
+    "青葉区"
+   ],
+   [
+    "ward_separate",
+    "ward",
+    false,
+    "14113",
+    "緑区",
+    "14118",
+    "都筑区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1986-11-03",
+  "pattern": "分離",
+  "reason_first_line": "戸塚区(14110)から分離し、栄区(14115)、泉区(14116)を新設",
+  "transitions": [
+   [
+    "ward_separate",
+    "ward",
+    false,
+    "14110",
+    "戸塚区",
+    "14115",
+    "栄区"
+   ],
+   [
+    "ward_separate",
+    "ward",
+    false,
+    "14110",
+    "戸塚区",
+    "14116",
+    "泉区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1982-07-01",
+  "pattern": "分離",
+  "reason_first_line": "多摩区(14135)から分離し、麻生区(14137)を新設",
+  "transitions": [
+   [
+    "ward_separate",
+    "ward",
+    false,
+    "14135",
+    "多摩区",
+    "14137",
+    "麻生区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-03-01",
+  "pattern": "郡の区域変更",
+  "reason_first_line": "鳳至郡穴水町(17421)、門前町(17422)が鳳珠郡穴水町(17461)、門前町(17462)に郡の区域変更",
+  "transitions": [
+   [
+    "recode",
+    "municipality",
+    false,
+    "17421",
+    "鳳至郡穴水町",
+    "17461",
+    "鳳珠郡穴水町"
+   ],
+   [
+    "recode",
+    "municipality",
+    false,
+    "17422",
+    "門前町",
+    "17462",
+    "門前町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-03-01",
+  "pattern": "編入合併",
+  "reason_first_line": "中道町(19326)と上九一色村(19341)大字梯及び古関が甲府市(19201)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "19326",
+    "中道町",
+    "19201",
+    "甲府市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    true,
+    "19341",
+    "上九一色村",
+    "19201",
+    "甲府市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-03-01",
+  "pattern": "編入合併",
+  "reason_first_line": "上九一色村(19341)大字梯及び古関が甲府市(19201)に編入し、大字精進、本栖及び富士ヶ嶺が富士河口湖町(19430)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    true,
+    "19341",
+    "上九一色村",
+    "19201",
+    "甲府市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    true,
+    "19341",
+    "上九一色村",
+    "19430",
+    "富士河口湖町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-11-01",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "木曽福島町(20421)、日義村(20426)、開田村(20427)、三岳村(20428)が合併し、木曽町(20432)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "20421",
+    "木曽福島町",
+    "20432",
+    "木曽町"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "20426",
+    "日義村",
+    "20432",
+    "木曽町"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "20427",
+    "開田村",
+    "20432",
+    "木曽町"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "20428",
+    "三岳村",
+    "20432",
+    "木曽町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-04-01",
+  "pattern": "政令指定都市施行",
+  "reason_first_line": "静岡市(22201)の静岡市(22100)への政令指定都市施行",
+  "transitions": [
+   [
+    "designated_city",
+    "municipality",
+    false,
+    "22201",
+    "静岡市",
+    "22100",
+    "静岡市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-03-31",
+  "pattern": "編入合併",
+  "reason_first_line": "蒲原町(22382)が清水区(22103)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "ward",
+    false,
+    "22382",
+    "蒲原町",
+    "22103",
+    "清水区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "22382",
+    "蒲原町",
+    "22100",
+    "静岡市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2008-11-01",
+  "pattern": "編入合併",
+  "reason_first_line": "由比町(22383)が清水区(22103)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "ward",
+    false,
+    "22383",
+    "由比町",
+    "22103",
+    "清水区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "22383",
+    "由比町",
+    "22100",
+    "静岡市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2024-01-01",
+  "pattern": "区の再編",
+  "reason_first_line": "浜松市（22130）の区の再編（７区から３区へ再編）　中区（22131）、東区（22132）、西区（22133）、南区（22134）、北区（22135）（三方原地区／初生町、三方原町、東三方町、豊岡町、三幸町、大原町、根洗町）を中央区（22138）に再編　北区（22135）（三方原地区以外）、浜北区（22136）を浜名区（22139）に再編　天竜区（22137）を天竜区（22140）に再編（区名、区域の変更なし）",
+  "transitions": [
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22131",
+    "中区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22132",
+    "東区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22133",
+    "西区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22134",
+    "南区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22135",
+    "北区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22135",
+    "北区",
+    "22139",
+    "浜名区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22136",
+    "浜北区",
+    "22139",
+    "浜名区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22137",
+    "天竜区",
+    "22140",
+    "天竜区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2024-01-01",
+  "pattern": "区の再編",
+  "reason_first_line": "浜松市（22130）の区の再編　中区（22131）、東区（22132）、西区（22133）、南区（22134）、北区（22135）（三方原地区／初生町、三方原町、東三方町、豊岡町、三幸町、大原町、根洗町）を中央区（22138）に再編",
+  "transitions": [
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22131",
+    "中区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22132",
+    "東区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22133",
+    "西区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22134",
+    "南区",
+    "22138",
+    "中央区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22135",
+    "北区",
+    "22138",
+    "中央区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2024-01-01",
+  "pattern": "区の再編",
+  "reason_first_line": "浜松市（22130）の区の再編　北区（22135）（三方原地区以外）、浜北区（22136）を浜名区（22139）に再編",
+  "transitions": [
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22135",
+    "北区",
+    "22139",
+    "浜名区"
+   ],
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22136",
+    "浜北区",
+    "22139",
+    "浜名区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2024-01-01",
+  "pattern": "区の再編",
+  "reason_first_line": "浜松市（22130）の区の再編　天竜区（22137）を天竜区（22140）に再編（区名、区域の変更なし）",
+  "transitions": [
+   [
+    "ward_reorg",
+    "ward",
+    false,
+    "22137",
+    "天竜区",
+    "22140",
+    "天竜区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2003-04-01",
+  "pattern": "新設合併（コード追加なし）",
+  "reason_first_line": "静岡市(22201)、清水市(22204)が合併し、静岡市を新設",
+  "transitions": [
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "22201",
+    "静岡市",
+    "22201",
+    "静岡市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "22204",
+    "清水市",
+    "22201",
+    "静岡市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-03-20",
+  "pattern": "編入合併",
+  "reason_first_line": "志賀町(25301)が大津市(25201)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25301",
+    "志賀町",
+    "25201",
+    "大津市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-02-13",
+  "pattern": "新設合併（コード追加なし）",
+  "reason_first_line": "長浜市(25203)、浅井町(25481)、びわ町(25484)が合併し、長浜市を新設",
+  "transitions": [
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "25203",
+    "長浜市",
+    "25203",
+    "長浜市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "25481",
+    "浅井町",
+    "25203",
+    "長浜市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "25484",
+    "びわ町",
+    "25203",
+    "長浜市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2010-01-01",
+  "pattern": "編入合併",
+  "reason_first_line": "虎姫町(25482)、湖北町(25483)、高月町(25501)、木之本町(25502)、余呉町(25503)、西浅井町(25504)が長浜市(25203)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25482",
+    "虎姫町",
+    "25203",
+    "長浜市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25483",
+    "湖北町",
+    "25203",
+    "長浜市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25501",
+    "高月町",
+    "25203",
+    "長浜市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25502",
+    "木之本町",
+    "25203",
+    "長浜市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25503",
+    "余呉町",
+    "25203",
+    "長浜市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25504",
+    "西浅井町",
+    "25203",
+    "長浜市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2010-03-21",
+  "pattern": "新設合併（コード追加なし）",
+  "reason_first_line": "近江八幡市(25204)、安土町(25381)が合併し、近江八幡市を新設",
+  "transitions": [
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "25204",
+    "近江八幡市",
+    "25204",
+    "近江八幡市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "25381",
+    "安土町",
+    "25204",
+    "近江八幡市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-02-11",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "八日市市(25205)、永源寺町(25401)、五個荘町(25402)、愛東町(25421)、湖東町(25422)が合併し、東近江市(25213)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25205",
+    "八日市市",
+    "25213",
+    "東近江市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25401",
+    "永源寺町",
+    "25213",
+    "東近江市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25402",
+    "五個荘町",
+    "25213",
+    "東近江市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25421",
+    "愛東町",
+    "25213",
+    "東近江市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25422",
+    "湖東町",
+    "25213",
+    "東近江市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2004-10-01",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "水口町(25363)、土山町(25364)、甲賀町(25365)、甲南町(25366)、信楽町(25367)が合併し、甲賀市(25209)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25363",
+    "水口町",
+    "25209",
+    "甲賀市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25364",
+    "土山町",
+    "25209",
+    "甲賀市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25365",
+    "甲賀町",
+    "25209",
+    "甲賀市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25366",
+    "甲南町",
+    "25209",
+    "甲賀市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25367",
+    "信楽町",
+    "25209",
+    "甲賀市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2004-10-01",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "中主町(25342)、野洲町(25343)が合併し、野洲市(25210)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25342",
+    "中主町",
+    "25210",
+    "野洲市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25343",
+    "野洲町",
+    "25210",
+    "野洲市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2004-10-01",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "石部町(25361)、甲西町(25362)が合併し、湖南市(25211)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25361",
+    "石部町",
+    "25211",
+    "湖南市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25362",
+    "甲西町",
+    "25211",
+    "湖南市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-01-01",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "マキノ町(25521)、今津町(25522)、朽木村(25523)、安曇川町(25524)、高島町(25525)、新旭町(25526)が合併し、高島市(25212)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25521",
+    "マキノ町",
+    "25212",
+    "高島市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25522",
+    "今津町",
+    "25212",
+    "高島市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25523",
+    "朽木村",
+    "25212",
+    "高島市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25524",
+    "安曇川町",
+    "25212",
+    "高島市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25525",
+    "高島町",
+    "25212",
+    "高島市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25526",
+    "新旭町",
+    "25212",
+    "高島市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-01-01",
+  "pattern": "編入合併",
+  "reason_first_line": "蒲生町(25382)、能登川町(25403)が東近江市(25213)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25382",
+    "蒲生町",
+    "25213",
+    "東近江市"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25403",
+    "能登川町",
+    "25213",
+    "東近江市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-02-14",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "山東町(25461)、伊吹町(25462)、米原町(25463)が合併し、米原市(25214)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25461",
+    "山東町",
+    "25214",
+    "米原市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25462",
+    "伊吹町",
+    "25214",
+    "米原市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25463",
+    "米原町",
+    "25214",
+    "米原市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-10-01",
+  "pattern": "編入合併",
+  "reason_first_line": "近江町(25464)が米原市(25214)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "25464",
+    "近江町",
+    "25214",
+    "米原市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-02-13",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "秦荘町(25423)、愛知川町(25424)が合併し、愛荘町(25425)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25423",
+    "秦荘町",
+    "25425",
+    "愛荘町"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "25424",
+    "愛知川町",
+    "25425",
+    "愛荘町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-04-01",
+  "pattern": "編入合併",
+  "reason_first_line": "京北町(26381)が右京区(26108)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "ward",
+    false,
+    "26381",
+    "京北町",
+    "26108",
+    "右京区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "26381",
+    "京北町",
+    "26100",
+    "京都市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1989-02-13",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "北区(27101)と大淀区(27112)が統合し、北区(27127)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "ward",
+    false,
+    "27101",
+    "北区",
+    "27127",
+    "北区"
+   ],
+   [
+    "merge_new_code",
+    "ward",
+    false,
+    "27112",
+    "大淀区",
+    "27127",
+    "北区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1989-02-13",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "東区(27105)と南区(27110)が統合し、中央区(27128)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "ward",
+    false,
+    "27105",
+    "東区",
+    "27128",
+    "中央区"
+   ],
+   [
+    "merge_new_code",
+    "ward",
+    false,
+    "27110",
+    "南区",
+    "27128",
+    "中央区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-04-01",
+  "pattern": "政令指定都市施行",
+  "reason_first_line": "堺市(27201)の堺市(27140)への政令指定都市施行",
+  "transitions": [
+   [
+    "designated_city",
+    "municipality",
+    false,
+    "27201",
+    "堺市",
+    "27140",
+    "堺市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-04-01",
+  "pattern": "区の新設",
+  "reason_first_line": "堺市(27201)の堺市(27140)への政令指定都市施行",
+  "transitions": [
+   [
+    "ward_create",
+    "ward",
+    false,
+    "27201",
+    "堺市",
+    "27141",
+    "堺区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "27201",
+    "堺市",
+    "27142",
+    "中区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "27201",
+    "堺市",
+    "27143",
+    "東区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "27201",
+    "堺市",
+    "27144",
+    "西区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "27201",
+    "堺市",
+    "27145",
+    "南区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "27201",
+    "堺市",
+    "27146",
+    "北区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "27201",
+    "堺市",
+    "27147",
+    "美原区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1980-12-01",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "葺合区(28103)、生田区(28104)が合併し、中央区(28110)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "ward",
+    false,
+    "28103",
+    "葺合区",
+    "28110",
+    "中央区"
+   ],
+   [
+    "merge_new_code",
+    "ward",
+    false,
+    "28104",
+    "生田区",
+    "28110",
+    "中央区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1984-05-01",
+  "pattern": "名称変更",
+  "reason_first_line": "溝口町(みぞぐちちょう、31404)が溝口町(みぞくちちょう、31404)に名称変更",
+  "transitions": [
+   [
+    "rename",
+    "municipality",
+    false,
+    "31404",
+    "溝口町",
+    "31404",
+    "溝口町"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1980-04-01",
+  "pattern": "政令指定都市施行",
+  "reason_first_line": "広島市(34201)の広島市(34100)への政令指定都市施行",
+  "transitions": [
+   [
+    "designated_city",
+    "municipality",
+    false,
+    "34201",
+    "広島市",
+    "34100",
+    "広島市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1980-04-01",
+  "pattern": "区の新設",
+  "reason_first_line": "広島市(34201)の広島市(34100)への政令指定都市施行",
+  "transitions": [
+   [
+    "ward_create",
+    "ward",
+    false,
+    "34201",
+    "広島市",
+    "34101",
+    "中区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "34201",
+    "広島市",
+    "34102",
+    "東区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "34201",
+    "広島市",
+    "34103",
+    "南区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "34201",
+    "広島市",
+    "34104",
+    "西区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "34201",
+    "広島市",
+    "34105",
+    "安佐南区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "34201",
+    "広島市",
+    "34106",
+    "安佐北区"
+   ],
+   [
+    "ward_create",
+    "ward",
+    false,
+    "34201",
+    "広島市",
+    "34107",
+    "安芸区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1985-03-20",
+  "pattern": "区の新設",
+  "reason_first_line": "佐伯区(34108)の新設",
+  "transitions": [
+   [
+    "ward_create",
+    "ward",
+    false,
+    "34100",
+    "広島市",
+    "34108",
+    "佐伯区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-04-25",
+  "pattern": "編入合併",
+  "reason_first_line": "湯来町(34324)が佐伯区(34108)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "ward",
+    false,
+    "34324",
+    "湯来町",
+    "34108",
+    "佐伯区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "34324",
+    "湯来町",
+    "34100",
+    "広島市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-02-01",
+  "pattern": "編入合併",
+  "reason_first_line": "沼隈町(34482)が福山市(34207)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "34482",
+    "沼隈町",
+    "34207",
+    "福山市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2006-01-01",
+  "pattern": "新設合併（コード追加あり）",
+  "reason_first_line": "高瀬町(37421)、山本町(37422)、三野町(37423)、豊中町(37425)、詫間町(37426)、仁尾町(37427)、財田町(37429)が合併し、三豊市(37208)を新設",
+  "transitions": [
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "37421",
+    "高瀬町",
+    "37208",
+    "三豊市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "37422",
+    "山本町",
+    "37208",
+    "三豊市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "37423",
+    "三野町",
+    "37208",
+    "三豊市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "37425",
+    "豊中町",
+    "37208",
+    "三豊市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "37426",
+    "詫間町",
+    "37208",
+    "三豊市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "37427",
+    "仁尾町",
+    "37208",
+    "三豊市"
+   ],
+   [
+    "merge_new_code",
+    "municipality",
+    false,
+    "37429",
+    "財田町",
+    "37208",
+    "三豊市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2005-01-11",
+  "pattern": "新設合併（コード追加なし）",
+  "reason_first_line": "大洲市(38207)、長浜町(38421)、肱川町(38424)、河辺村(38425)が合併し、大洲市を新設",
+  "transitions": [
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "38207",
+    "大洲市",
+    "38207",
+    "大洲市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "38421",
+    "長浜町",
+    "38207",
+    "大洲市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "38424",
+    "肱川町",
+    "38207",
+    "大洲市"
+   ],
+   [
+    "merge_reuse_code",
+    "municipality",
+    false,
+    "38425",
+    "河辺村",
+    "38207",
+    "大洲市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "2008-01-01",
+  "pattern": "編入合併",
+  "reason_first_line": "春野町(39383)が高知市(39201)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "municipality",
+    false,
+    "39383",
+    "春野町",
+    "39201",
+    "高知市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1974-04-01",
+  "pattern": "分割",
+  "reason_first_line": "小倉区(40102)を分割し、小倉北区(40106)、小倉南区(40107)を新設",
+  "transitions": [
+   [
+    "ward_split",
+    "ward",
+    false,
+    "40102",
+    "小倉区",
+    "40106",
+    "小倉北区"
+   ],
+   [
+    "ward_split",
+    "ward",
+    false,
+    "40102",
+    "小倉区",
+    "40107",
+    "小倉南区"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1972-04-01",
+  "pattern": "政令指定都市施行",
+  "reason_first_line": "福岡市(40201)の福岡市(40130)への政令指定都市施行",
+  "transitions": [
+   [
+    "designated_city",
+    "municipality",
+    false,
+    "40201",
+    "福岡市",
+    "40130",
+    "福岡市"
+   ]
+  ]
+ },
+ {
+  "effective_date": "1975-03-01",
+  "pattern": "編入合併",
+  "reason_first_line": "早良町(40321)が西区(40135)に編入",
+  "transitions": [
+   [
+    "absorb",
+    "ward",
+    false,
+    "40321",
+    "早良町",
+    "40135",
+    "西区"
+   ],
+   [
+    "absorb",
+    "municipality",
+    false,
+    "40321",
+    "早良町",
+    "40130",
+    "福岡市"
+   ]
+  ]
+ }
+]
